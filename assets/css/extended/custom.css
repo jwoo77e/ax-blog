@@ -219,3 +219,34 @@ blockquote p {
   background: var(--brand-primary);
   color: white;
 }
+
+/* 카테고리/태그 목록 페이지 — 버튼 텍스트 가시성 */
+.terms-tags a,
+.terms-tags li a,
+ul.terms-tags a {
+  color: var(--brand-primary) !important;
+  background: rgba(79, 142, 247, 0.1);
+  border: 1px solid rgba(79, 142, 247, 0.3);
+  border-radius: 8px;
+  padding: 6px 16px;
+}
+.terms-tags a:hover,
+.terms-tags li a:hover {
+  background: var(--brand-primary) !important;
+  color: white !important;
+}
+
+/* 라이트 모드 카테고리/태그 텍스트 보장 */
+[data-theme="light"] .terms-tags a,
+[data-theme="light"] .post-tags a,
+[data-theme="light"] ul li a[href*="categories"],
+[data-theme="light"] ul li a[href*="tags"] {
+  color: var(--brand-navy) !important;
+  background: rgba(31, 73, 125, 0.08);
+  border: 1px solid rgba(31, 73, 125, 0.25);
+}
+[data-theme="light"] .terms-tags a:hover,
+[data-theme="light"] .post-tags a:hover {
+  background: var(--brand-navy) !important;
+  color: white !important;
+}
