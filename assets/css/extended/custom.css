@@ -1,0 +1,221 @@
+/* ============================
+   리스크제로 AX 블로그 테마
+   ============================ */
+
+:root {
+  /* 다크 모드 (기본) */
+  --theme: #0f1117;
+  --entry: #1a1d27;
+  --primary: #e2e8f0;
+  --secondary: #8892a4;
+  --tertiary: #2a2d3a;
+  --content: #d1d5db;
+  --code-block-bg: #1a1d27;
+  --code-bg: #1e2132;
+  --border: #2a2d3a;
+  --gap: 24px;
+  
+  /* 브랜드 컬러 */
+  --brand-primary: #4F8EF7;
+  --brand-navy: #1F497D;
+  --brand-accent: #60a5fa;
+  --brand-danger: #C00000;
+  --brand-gradient: linear-gradient(135deg, #1F497D 0%, #4F8EF7 100%);
+}
+
+/* 라이트 모드 */
+[data-theme="light"] {
+  --theme: #f8fafc;
+  --entry: #ffffff;
+  --primary: #1a1d27;
+  --secondary: #64748b;
+  --content: #334155;
+  --code-block-bg: #f1f5f9;
+  --code-bg: #e2e8f0;
+  --border: #e2e8f0;
+}
+
+/* 헤더 — 그라데이션 */
+.header {
+  background: var(--brand-gradient) !important;
+  border-bottom: 2px solid var(--brand-primary);
+}
+
+.header .logo a {
+  color: #ffffff !important;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.header nav .menu a {
+  color: rgba(255,255,255,0.85) !important;
+}
+.header nav .menu a:hover {
+  color: #ffffff !important;
+}
+
+/* 홈 인포 카드 — 글로우 효과 */
+.home-info {
+  background: var(--entry);
+  border: 1px solid var(--brand-primary);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.home-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--brand-gradient);
+}
+.home-info h1 {
+  color: var(--brand-primary) !important;
+  font-size: 1.8rem;
+}
+
+/* 포스트 카드 — 호버 효과 */
+.post-entry {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+}
+.post-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(79, 142, 247, 0.15);
+  border-color: var(--brand-primary);
+}
+.post-entry .entry-header h2 {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* 포스트 본문 */
+.post-content h1, .post-content h2, .post-content h3 {
+  color: var(--brand-primary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3rem;
+}
+
+/* 코드 블록 — 네온 느낌 */
+.highlight pre {
+  border-radius: 10px;
+  border: 1px solid var(--brand-primary);
+}
+
+/* 태그 — 브랜드 컬러 */
+.post-tags a {
+  background: rgba(79, 142, 247, 0.1);
+  border: 1px solid rgba(79, 142, 247, 0.3);
+  color: var(--brand-primary);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+.post-tags a:hover {
+  background: var(--brand-primary);
+  color: white;
+}
+
+/* 테이블 스타일 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+th {
+  background: var(--brand-navy);
+  color: white;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 0.85rem;
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+tr:hover td {
+  background: rgba(79, 142, 247, 0.05);
+}
+
+/* TOC — 사이드바 스타일 */
+.toc {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--entry);
+}
+
+/* 푸터 */
+.footer {
+  border-top: 1px solid var(--border);
+  color: var(--secondary);
+}
+.footer a {
+  color: var(--brand-primary);
+}
+
+/* 소셜 아이콘 */
+.social-icons a svg {
+  fill: var(--brand-primary);
+}
+.social-icons a:hover svg {
+  fill: var(--brand-accent);
+}
+
+/* 읽기 시간/날짜 */
+.entry-footer {
+  color: var(--secondary);
+  font-size: 0.82rem;
+}
+
+/* 스크롤바 (다크 모드) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--theme);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-navy);
+  border-radius: 4px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .home-info h1 { font-size: 1.4rem; }
+  .post-entry { border-radius: 8px; }
+}
+
+/* AX 배지 — 특별 스타일 */
+.post-content strong {
+  color: var(--brand-primary);
+}
+
+/* 블록쿼트 — AX 스타일 */
+blockquote {
+  border-left: 3px solid var(--brand-primary);
+  background: rgba(79, 142, 247, 0.05);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+}
+blockquote p {
+  color: var(--content);
+}
+
+/* 페이지네이션 */
+.pagination a {
+  color: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+  border-radius: 8px;
+}
+.pagination a:hover {
+  background: var(--brand-primary);
+  color: white;
+}
