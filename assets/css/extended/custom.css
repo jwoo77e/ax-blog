@@ -273,3 +273,44 @@ ul.terms-tags a {
   fill: rgba(255,255,255,0.9);
   stroke: rgba(255,255,255,0.9);
 }
+
+/* 모든 페이지 헤더 — 강제 통일 (카테고리/태그 페이지 포함) */
+html .header,
+html body .header,
+html[data-theme="light"] .header,
+html[data-theme="dark"] .header,
+body.list .header,
+body .header {
+  background: linear-gradient(135deg, #1F497D 0%, #4F8EF7 100%) !important;
+  border-bottom: 2px solid #4F8EF7 !important;
+}
+
+html .header .logo a,
+html body .header .logo a,
+body.list .header .logo a {
+  color: #ffffff !important;
+}
+
+html .header nav ul#menu li a,
+html body .header nav ul#menu li a,
+body.list .header nav ul#menu li a,
+.header .menu a,
+.header .menu li a span {
+  color: rgba(255,255,255,0.9) !important;
+  font-weight: 600;
+}
+
+html .header nav ul#menu li a:hover,
+.header .menu a:hover {
+  color: #ffffff !important;
+}
+
+html .header #theme-toggle,
+body .header #theme-toggle {
+  color: rgba(255,255,255,0.9) !important;
+}
+html .header #theme-toggle svg,
+body .header #theme-toggle svg {
+  fill: rgba(255,255,255,0.9) !important;
+  stroke: rgba(255,255,255,0.9) !important;
+}
