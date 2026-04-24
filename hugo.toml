@@ -1,0 +1,60 @@
+baseURL = "https://jwoo77e.github.io/ax-blog/"
+languageCode = "ko"
+title = "AI와 함께 일하는 법"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  env = "production"
+  author = "David Kim"
+  description = "리스크제로 AX 총괄이 AI Agent와 함께 일하는 실무 기록"
+  keywords = ["AI", "AX", "Agent", "하네스 엔지니어링", "산업안전", "리스크제로"]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  
+  [params.homeInfoParams]
+    Title = "AI와 함께 일하는 법 🤖"
+    Content = """
+리스크제로 기술연구소 AX 총괄 David Kim의 실무 기록.  
+AI Agent, 하네스 엔지니어링, 멀티에이전트 시스템으로 산업안전을 혁신하는 여정을 공유합니다.
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/jwoo77e"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:jaewoo.kim@riskzero.kr"
+
+[menu]
+  [[menu.main]]
+    identifier = "categories"
+    name = "카테고리"
+    url = "/categories/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "태그"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "소개"
+    url = "/about/"
+    weight = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    style = "monokai"
